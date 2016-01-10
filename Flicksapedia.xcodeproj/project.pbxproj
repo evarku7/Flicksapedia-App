@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		24B2E8941C42DB4F005422CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8931C42DB4F005422CD /* AppDelegate.swift */; };
-		24B2E8961C42DB4F005422CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8951C42DB4F005422CD /* ViewController.swift */; };
 		24B2E8991C42DB4F005422CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B2E8971C42DB4F005422CD /* Main.storyboard */; };
 		24B2E89B1C42DB4F005422CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B2E89A1C42DB4F005422CD /* Assets.xcassets */; };
 		24B2E89E1C42DB4F005422CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B2E89C1C42DB4F005422CD /* LaunchScreen.storyboard */; };
+		24B2E8A61C42E418005422CD /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8A51C42E418005422CD /* MoviesViewController.swift */; };
+		24B2E8A91C42ED08005422CD /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8A81C42ED08005422CD /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		24B2E8901C42DB4F005422CD /* Flicksapedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicksapedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B2E8931C42DB4F005422CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24B2E8951C42DB4F005422CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24B2E8981C42DB4F005422CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24B2E89A1C42DB4F005422CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24B2E89D1C42DB4F005422CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24B2E89F1C42DB4F005422CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24B2E8A51C42E418005422CD /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		24B2E8A81C42ED08005422CD /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		24B2E8921C42DB4F005422CD /* Flicksapedia */ = {
 			isa = PBXGroup;
 			children = (
+				24B2E8AA1C42ED2F005422CD /* View Controllers */,
+				24B2E8A71C42EC74005422CD /* Views */,
 				24B2E8931C42DB4F005422CD /* AppDelegate.swift */,
-				24B2E8951C42DB4F005422CD /* ViewController.swift */,
 				24B2E8971C42DB4F005422CD /* Main.storyboard */,
 				24B2E89A1C42DB4F005422CD /* Assets.xcassets */,
 				24B2E89C1C42DB4F005422CD /* LaunchScreen.storyboard */,
 				24B2E89F1C42DB4F005422CD /* Info.plist */,
 			);
 			path = Flicksapedia;
+			sourceTree = "<group>";
+		};
+		24B2E8A71C42EC74005422CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24B2E8A81C42ED08005422CD /* MovieCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		24B2E8AA1C42ED2F005422CD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24B2E8A51C42E418005422CD /* MoviesViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B2E8961C42DB4F005422CD /* ViewController.swift in Sources */,
 				24B2E8941C42DB4F005422CD /* AppDelegate.swift in Sources */,
+				24B2E8A61C42E418005422CD /* MoviesViewController.swift in Sources */,
+				24B2E8A91C42ED08005422CD /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
