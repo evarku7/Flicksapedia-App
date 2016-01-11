@@ -13,9 +13,11 @@
 		24B2E89E1C42DB4F005422CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B2E89C1C42DB4F005422CD /* LaunchScreen.storyboard */; };
 		24B2E8A61C42E418005422CD /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8A51C42E418005422CD /* MoviesViewController.swift */; };
 		24B2E8A91C42ED08005422CD /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B2E8A81C42ED08005422CD /* MovieCell.swift */; };
+		9227FF3CBA1A6E05D66965AB /* Pods_Flicksapedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B364BCB86618762CA7E3679 /* Pods_Flicksapedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22BCDD9061F25994AB4D1767 /* Pods-Flicksapedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicksapedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicksapedia/Pods-Flicksapedia.release.xcconfig"; sourceTree = "<group>"; };
 		24B2E8901C42DB4F005422CD /* Flicksapedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicksapedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B2E8931C42DB4F005422CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24B2E8981C42DB4F005422CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		24B2E89F1C42DB4F005422CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B2E8A51C42E418005422CD /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		24B2E8A81C42ED08005422CD /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		7B364BCB86618762CA7E3679 /* Pods_Flicksapedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicksapedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6A0D4751450E2252C10718 /* Pods-Flicksapedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicksapedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicksapedia/Pods-Flicksapedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9227FF3CBA1A6E05D66965AB /* Pods_Flicksapedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				24B2E8921C42DB4F005422CD /* Flicksapedia */,
 				24B2E8911C42DB4F005422CD /* Products */,
+				955B073F4CF8D70A8FD3BB73 /* Pods */,
+				8DC25C9778445F52DBB51E9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +90,23 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		8DC25C9778445F52DBB51E9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B364BCB86618762CA7E3679 /* Pods_Flicksapedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		955B073F4CF8D70A8FD3BB73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A6A0D4751450E2252C10718 /* Pods-Flicksapedia.debug.xcconfig */,
+				22BCDD9061F25994AB4D1767 /* Pods-Flicksapedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24B2E8A21C42DB4F005422CD /* Build configuration list for PBXNativeTarget "Flicksapedia" */;
 			buildPhases = (
+				B9DBC81FD4244D08BBA71C34 /* Check Pods Manifest.lock */,
 				24B2E88C1C42DB4F005422CD /* Sources */,
 				24B2E88D1C42DB4F005422CD /* Frameworks */,
 				24B2E88E1C42DB4F005422CD /* Resources */,
+				12C1F01D16132074A2605A3E /* Embed Pods Frameworks */,
+				54800AF0A1B3F3A8FA4A1BCA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C1F01D16132074A2605A3E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flicksapedia/Pods-Flicksapedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54800AF0A1B3F3A8FA4A1BCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flicksapedia/Pods-Flicksapedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9DBC81FD4244D08BBA71C34 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		24B2E88C1C42DB4F005422CD /* Sources */ = {
@@ -266,6 +341,7 @@
 		};
 		24B2E8A31C42DB4F005422CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A6A0D4751450E2252C10718 /* Pods-Flicksapedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flicksapedia/Info.plist;
@@ -277,6 +353,7 @@
 		};
 		24B2E8A41C42DB4F005422CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BCDD9061F25994AB4D1767 /* Pods-Flicksapedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Flicksapedia/Info.plist;
@@ -305,6 +382,7 @@
 				24B2E8A41C42DB4F005422CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
