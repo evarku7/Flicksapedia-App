@@ -8,21 +8,31 @@
 
 import UIKit
 import AFNetworking
+import EZLoadingActivity
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scrollView: UITableView!
     
     var movies: [NSDictionary]?
+    
+    var refreshControl: UIRefreshControl!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Flicksapedia"
-
+        
+        
+    
         tableView.dataSource = self
         tableView.delegate = self
+        
+//        EZLoadingActivity.show("Loading...", disableUI: true)
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
         let url = NSURL(string:"https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")
@@ -42,10 +52,24 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                             
                             self.movies = responseDictionary["results"] as? [NSDictionary]
                             self.tableView.reloadData()
+                            EZLoadingActivity.hide(success: true, animated: true)
+                            
                     }
+                }
+                else
+                {
+                    EZLoadingActivity.hide(success: false, animated: true)
                 }
         });
         task.resume()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        scrollView.insertSubview(refreshControl, atIndex: 0)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        EZLoadingActivity.showWithDelay("loading...", disableUI: true, seconds: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +106,21 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         print("row \(indexPath.row)")
         return cell
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh() {
+        delay(2, closure: {
+            self.refreshControl.endRefreshing()
+        })
     }
     
 

@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'Flicksapedia' do
     pod 'AFNetworking'
+	pod 'EZLoadingActivity'
 end
 

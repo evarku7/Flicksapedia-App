@@ -65,12 +65,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="scrollView" destination="GzM-sx-57S" id="ndn-vo-wck"/>
                         <outlet property="tableView" destination="GzM-sx-57S" id="euc-33-Pkh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="357"/>
+            <point key="canvasLocation" x="470" y="343"/>
         </scene>
     </scenes>
 </document>
